@@ -15,22 +15,11 @@ for each x in A
 ### RHS => LHS
 
 for each x in ((A cap B) cup (A - B))
-  if x not in A and x not in B
-    x not in (A cap B)
-    x not in (A - B)
-    x not in ((A cap B) cup (A - B))
-    i.e., this case never happens
-  if x not in A and x in B
-    x not in (A cap B)
-    x not in (A - B)
-    x not in ((A cap B) cup (A - B))
-    i.e., this case never happens
-  if x in A and x not in B
-    x not in (A cap B)
-    x in (A - B)
-    x in (A cap B) cup (A - B)
-  if x in A and x in B
-    x in (A cap B)
-    x in (A - B)
-    x in ((A cap B) cup (A - B))
-  the only truthful cases are those that maintain that x in A
+  if x in (A cap B)
+    x in A and x in B
+  if x in (A - B)
+    x in A and x not in B
+  i.e. for both cases we see:
+    (x in A and x in B) or (x in A and x not in B)
+  logical manipulation gives us that for both cases:
+    x in A
