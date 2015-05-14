@@ -1,43 +1,36 @@
 # I. N. Herstein’s Topics in Algebra 2nd Edition
 
-## Prove: A = (A and B) or (A - B)
+## Prove: A = (A cap B) cup (A - B)
 
-### A and B = null
+### LHS => RHS
 
-A = (A and B) or (A - B)
-  = null or (A - B)
-  = (A - B)
-  = {x in A | x not in B}  -- Because x in A is never x in B, this is true for every x in A
-  = {x in A}
-  = A
+for each x in A
+   if x in B
+     x in (A cap B)
+     x in ((A cap B) cup (A - B))
+   if x not in B
+     x in (A - B)
+     x in ((A cap B) cup (A - B))
 
-### A and B is proper subset of A or B
+### RHS => LHS
 
-A = (A and B) or (A - B)
-  = (A or (A - B)) and (B or (A - B))
-  = (A or {x in A | x not in B}) and
-    (B or {x in A | x not in B})
-  = (A or {x in A | x not in B}) and  -- A or a subset of A = A
-    (B or {x in A | x not in B})  -- (B or (subset of A which is not shared with B) = (A or B) [because B also holds the subset which is shared with A]
-  = A and (B or A)
-  = (A and B) or (A and A)
-  = (A and B) or A  -- the subset of A that is shared with B is a subset of A, so a union of a subset of A with A, is A.
-  = A
-
-### A is a proper subset of B
-
-A = (A and B) or (A - B)
-  = A or (A - B)
-  = A
-
-### B is a proper subset of A
-
-A = (A and B) or (A - B)
-  = B or (A - B)  -- the union of the subset of A that is not shared with B and B will be A
-  = A
-
-### A = B
-
-A = (A and B) or (A - B)
-  = A or null
-  = A
+for each x in ((A cap B) cup (A - B))
+  if x not in A and x not in B
+    x not in (A cap B)
+    x not in (A - B)
+    x not in ((A cap B) cup (A - B))
+    i.e., this case never happens
+  if x not in A and x in B
+    x not in (A cap B)
+    x not in (A - B)
+    x not in ((A cap B) cup (A - B))
+    i.e., this case never happens
+  if x in A and x not in B
+    x not in (A cap B)
+    x in (A - B)
+    x in (A cap B) cup (A - B)
+  if x in A and x in B
+    x in (A cap B)
+    x in (A - B)
+    x in ((A cap B) cup (A - B))
+  the only truthful cases are those that maintain that x in A
