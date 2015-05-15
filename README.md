@@ -1,5 +1,7 @@
 # I. N. Herstein’s Topics in Algebra 2nd Edition
 
+Thanks effex for recommending this book.
+
 Mirrors at:
 
 * [Gitlab][gitlab-mirror]
@@ -49,22 +51,33 @@ a ~ b if a - b is a multiple of n.
 #### a ~ a
 
 ```
-a - a = 0, which is a multiple of n.
+k = 0
+
+a - a = 0 = k * n
 ```
 
 #### a ~ b => b ~ a
 
 ```
-if (a - b) is a multiple of n the negative of (a - b) is (b - a) which is also a multiple of n.
+a - b = k * n
+
+b - a = -(a - b)
+      = -(k * n)
+      so, b ~ a
 ```
 
 #### a ~ b and b ~ c => a ~ c
 
+(thanks effex)
+
 ```
-a - b is a multiple of n.
-b - c is a multiple of n.
+a - b = r * n
+
+b - c = s * n
+
 a - c = (a - b) + (b - c)
-the addition of two multiples of n will result with a multiple of n.
+      = r * n + s * n
+      = (r + s) * n
 ```
 
 [gitlab-mirror]: <https://gitlab.com/yuvallanger/i-n-herstein.git>
