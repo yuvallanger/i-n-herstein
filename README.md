@@ -37,5 +37,33 @@ for each x in ((A cap B) cup (A - B))
     x in A
 ```
 
+### Page 7 - Prove Example 1.1.3
+
+```
+n is integer and greater than one.
+a ~ b if a - b is a multiple of n.
+```
+
+#### a ~ a
+
+```
+a - a = 0, which is a multiple of n.
+```
+
+#### a ~ b => b ~ a
+
+```
+if (a - b) is a multiple of n the negative of (a - b) is (b - a) which is also a multiple of n.
+```
+
+#### a ~ b and b ~ c => a ~ c
+
+```
+a - b is a multiple of n.
+b - c is a multiple of n.
+a - c = (a - b) + (b - c)
+the addition of two multiples of n will result with a multiple of n.
+```
+
 [gitlab-mirror]: <https://gitlab.com/yuvallanger/i-n-herstein.git>
 [github-mirror]: <https://github.com/yuvallanger/i-n-herstein.git>
