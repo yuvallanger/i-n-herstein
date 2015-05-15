@@ -39,6 +39,8 @@ for each x in ((A cap B) cup (A - B))
 
 ### Page 7 - Prove Example 1.1.3
 
+(thanks math718)
+
 ```
 n is integer and greater than one.
 a ~ b if a - b is a multiple of n.
