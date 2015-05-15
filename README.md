@@ -1,6 +1,6 @@
 # I. N. Herstein’s Topics in Algebra 2nd Edition
 
-## Mirrors at:
+Mirrors at:
 
 * [Gitlab][gitlab-mirror]
 * [Github][github-mirror]
