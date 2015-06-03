@@ -80,5 +80,67 @@ a - c = (a - b) + (b - c)
       = (r + s) * n
 ```
 
+#### Page 8 to 9 - Problems
+
+##### 1. a. Prove: $(A\subset B)\wedge (B\subset C)\implies A\subset C$
+
+$S\subset T\iff x\in S\implies x\in T$.
+
+According to this definition, the above can be rewritten as:
+
+$x\in A\implies B\wedge x\in B\implies x\in C$
+
+b. Prove $B\subset A\implies A\cup B=A$, and conversely.
+
+(1) $B\subset A\iff x\in B\implies x\in A$
+
+(2) $A\cup B={x|x\in A\vee x\in B}$
+
+$$
+let x\in A, \newline
+  then x\in A\vee x\in B \newline
+let x\in B,
+  then, according to (1), \implies x\in A\implies x\in A\vee x\in B
+$$
+
+conversely, 
+
+Prove: A\cup (B\cap C)=(A\cup B)\cap (A\cup C)
+
+A\cup (B\cap C)
+ \implies {y|y\in A or y in {x| x in B and x in C}}
+ \implies {y|y\in A or (y in B and y in C)}
+ \implies {y|(y\in A or y in B) and (y in A or y in C)}
+ \implies (A\cup B) cap (A cup C) A cup (B cap C)
+ \implies {y|y in A or y in {x|x in B and x in C}}
+ \implies {y|y in A or (y in B and y in C)}
+ \implies {y|(y in A or y in B) and (y in A or y in C)}
+ \implies (A cup B) cap (A cup C)
+
+(A\cup B)\cap (A\cup C)
+  \implies {x|x\in A\vee x\in B}\cap {x|x\in A\vee x\in C}
+  \implies {y|y\in {x|x\in A\vee x\in B}\wedge y\in {x|x\in A\vee x\in C}}
+  \implies {y|(y\in A\vee x\in B)\wedge (y\in A\vee y\in C)}
+  \implies {y|y\in A\vee (y\in B\wedge y\in C)}
+  \implies {y|y\in A\vee y\in {x|x\in B\wedge x\in C}}
+  \implies {y|y\in A\vee y\in (B\cap C)}
+  \implies A\cup (B\cap C)
+
+
+(A\cap B)’=A’\cup B’
+
+(A\cap B)’
+  \implies S-(A\cap B)
+  \implies {x|x\in S\wedge not (x\in (A\cap B))}
+  \implies {x|x\in S\wedge not (x\in A\wedge x\in B))}
+  \implies {x|x\in S\wedge ((not x\in A)\vee (not x\in B))}
+  \implies {x|(x\in S\wedge (not x\in A))\vee (x\in S\wedge (not x\in B))}
+  \implies {x|x\in A’\vee x\in B’}
+  \implies A’\cup B’
+
+
+(A\cup B)’=A’\cap B’
+
+
 [gitlab-mirror]: <https://gitlab.com/yuvallanger/i-n-herstein.git>
 [github-mirror]: <https://github.com/yuvallanger/i-n-herstein.git>
